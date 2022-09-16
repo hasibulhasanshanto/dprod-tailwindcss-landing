@@ -10,6 +10,6 @@
 }
 @layer components {
   .link-hover {
-    @apply text-orange-700;
+    @apply text-orange-600;
   }
 }
