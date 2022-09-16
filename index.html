@@ -6,12 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Digital Product Design Agency</title>
     <link rel="shortcut icon" href="favicon.svg" type="image/x-icon" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Main CSS -->
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
     <!-- Header start -->
     <header class="py-5 bg-white">
-      <nav class="w-3/4 mx-auto flex justify-between items-center">
+      <nav class="w-4/5 mx-auto flex justify-between items-center">
         <div class="brand">
           <img src="./images/logo.svg" alt="brand-logo" />
         </div>
@@ -31,13 +40,50 @@
             <li class="px-6 cursor-pointer text-black hover:link-hover">
               <a href="#">Blog</a>
             </li>
-            <li class="px-6 py-4 cursor-pointer text-white bg-orange-600 rounded-md">
+            <li
+              class="px-5 py-3 cursor-pointer text-white bg-orange-600 rounded-md border-2 border-orange-600 hover:bg-white hover:text-orange-600"
+            >
               <a href="#">Contact Us</a>
             </li>
           </ul>
         </div>
       </nav>
     </header>
-    <!--/. Header start -->
+    <!--/. Header end -->
+
+    <!-- Main start -->
+    <main>
+      <!-- Hero area start -->
+      <section>
+        <div class="hero-are w-4/5 mx-auto flex justify-between py-20">
+          <div class="hero-left w-1/2 py-28">
+            <h1 class="text-7xl font-medium leading-[5rem]">
+              Digital <span class="text-orange-600">product</span> design agency
+            </h1>
+            <p class="text-xl text-stone-500 my-5">
+              Create live segments and target the right people for messages
+              based on their behaviors.
+            </p>
+            <button
+              class="px-6 py-4 cursor-pointer text-white bg-black rounded-md font-medium ease-in-out delay-150 hover:bg-orange-600"
+            >
+              Get Started
+            </button>
+          </div>
+          <div class="hero-right">
+            <div class="banner-img relative">
+              <img src="./images/hero-banner.png" alt="hero banner" />
+              <img
+                class="-mt-24 -ml-8"
+                src="./images/hero-shape-1.svg"
+                alt="hero shape"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--/. Hero area end -->
+    </main>
+    <!-- Main end -->
   </body>
 </html>
