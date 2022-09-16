@@ -1,0 +1,10 @@
+@import "remixicon/fonts/remixicon.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .link-hover {
+    @apply text-orange-700;
+  }
+}
