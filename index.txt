@@ -168,3 +168,5 @@ Copyright 2022 All Rights Reserved by codewithsadee.
 
 
 #---------- BACK TO TOP ----------#
+
+grid lg:grid-cols-4 sm:grid-cols-1 gap-x-14
