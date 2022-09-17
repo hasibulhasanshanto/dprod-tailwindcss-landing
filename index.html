@@ -21,14 +21,14 @@
     ></script>
 
     <!-- Main CSS -->
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="./main.css" />
     <!-- Prelaod an image -->
     <link rel="preload" as="image" href="./images/hero-banner.png" />
   </head>
-  <body>
+  <body :class="{'overflow-hidden': open===true}">
     <!-- Header start -->
-    <header class="py-5 bg-white w-full fixed z-50">
-      <nav class="w-4/5 mx-auto flex justify-between items-center">
+    <header class="py-5 bg-white w-full fixed z-50 drop-shadow-md">
+      <nav class="w-4/5 mx-auto flex justify-between items-center relative">
         <div class="brand">
           <img src="./images/logo.svg" alt="brand-logo" />
         </div>
@@ -37,7 +37,7 @@
             class="flex justify-center items-center xl:space-x-1 uppercase font-medium"
           >
             <li class="px-3 xl:px-6 cursor-pointer text-black hover:link-hover">
-              <a href="#">Home</a>
+              <a href="">Home</a>
             </li>
 
             <li class="px-3 xl:px-6 cursor-pointer text-black hover:link-hover">
@@ -60,6 +60,69 @@
               >
             </li>
           </ul>
+        </div>
+        <div class="hamburger block md:block lg:hidden" x-data="{open:false}">
+          <button
+            @click="open = true"
+            :class="{'hidden':open===true, 'block':open===false}"
+          >
+            <i class="ri-menu-line ri-xl"></i>
+          </button>
+          <button
+            :class="{'block':open===true, 'hidden':open===false}"
+            @click="open = false"
+          >
+            <i class="ri-close-fill ri-xl"></i>
+          </button>
+
+          <div
+            class="hidden fixed mobile-menu min-w-full duration-300 ease-in-out h-screen bg-stone-800 left-0 pt-14 mt-8"
+            :class="{'block':open===true, 'hidden':open===false}"
+          >
+            <ul
+              class="flex flex-col items-center uppercase font-medium text-center space-y-8"
+            >
+              <li
+                @click="open = false"
+                class="px-3 xl:px-6 cursor-pointer text-white hover:link-hover"
+              >
+                <a href="">Home</a>
+              </li>
+
+              <li
+                @click="open = false"
+                class="px-3 xl:px-6 cursor-pointer text-white hover:link-hover"
+              >
+                <a href="#services">Services</a>
+              </li>
+              <li
+                @click="open = false"
+                class="px-3 xl:px-6 cursor-pointer text-white hover:link-hover"
+              >
+                <a href="#customers">Customers</a>
+              </li>
+              <li
+                @click="open = false"
+                class="px-3 xl:px-6 cursor-pointer text-white hover:link-hover"
+              >
+                <a href="#projects">Projects</a>
+              </li>
+              <li
+                @click="open = false"
+                class="px-3 xl:px-6 cursor-pointer text-white hover:link-hover"
+              >
+                <a href="#blogs">Blog</a>
+              </li>
+              <li>
+                <a
+                  @click="open = false"
+                  class="px-3 py-2 xl:px-5 xl:py-3 cursor-pointer text-white bg-orange-600 rounded-md border-2 border-orange-600 hover:bg-white hover:text-orange-600"
+                  href="#footer"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
