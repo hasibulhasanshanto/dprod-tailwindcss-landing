@@ -22,10 +22,12 @@
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="main.css" />
+    <!-- Prelaod an image -->
+    <link rel="preload" as="image" href="./images/hero-banner.png" />
   </head>
   <body>
     <!-- Header start -->
-    <header class="py-5 bg-white">
+    <header class="py-5 bg-white w-full fixed z-50">
       <nav class="w-4/5 mx-auto flex justify-between items-center">
         <div class="brand">
           <img src="./images/logo.svg" alt="brand-logo" />
@@ -454,7 +456,7 @@
 
     <!-- Footer Start -->
     <footer id="footer" class="w-4/5 mx-auto">
-      <div class="main-footer flex justify-around py-32">
+      <div class="main-footer flex justify-between py-32">
         <div class="footer-item">
           <img src="./images/logo.svg" alt="" />
           <p class="mt-8 mb-3 text-xl text-stone-600">
