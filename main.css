@@ -18,10 +18,16 @@
   .card-zoom {
     @apply relative flex items-center overflow-hidden shadow-xl max-w-[35rem] min-h-[18rem];
   }
+  .card-zoom-mini {
+    @apply relative flex items-center overflow-hidden shadow-xl max-w-[35rem] min-h-[16rem];
+  }
   .card-zoom-image {
     @apply absolute transition-all duration-500 ease-in-out transform bg-center bg-cover;
   }
   .card:hover .card-zoom-image {
+    @apply scale-125;
+  }
+  .card-mini:hover .card-zoom-image {
     @apply scale-125;
   }
 }
